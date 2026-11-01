@@ -30,6 +30,7 @@
 请不要双击 convert.py（那是命令行，没有界面）。
 
 五、做成 EXE（给自己或给别人用）
+打包脚本就在本文件夹，文件名是「打包成EXE.bat」，和「双击打开.bat」放在一起。
 1. 双击「打包成EXE.bat」，等它跑完
 2. 打开 dist\FileConverter\FileConverter.exe
-3. 整个 FileConverter 文件夹可一起拷走使用
+3. 把整个 dist\FileConverter 文件夹一起拷走即可使用

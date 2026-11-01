@@ -128,9 +128,11 @@ file-converter/
 ├── convert.py             # 转换核心 + 命令行
 ├── start.bat / 双击打开.bat # Windows 启动（后者只是调用前者）
 ├── start.sh               # macOS / Linux 启动
-├── 打包成EXE.bat           # 按 FileConverter.spec 打包
+├── 打包成EXE.bat           # 项目根目录的打包入口
+├── FileConverter.spec      # 打包配置（入口脚本调用它）
 ├── scripts/ensure_venv.bat # Windows 共用：检查 Python 与依赖
 ├── requirements.txt
+├── requirements-build.txt  # 打包时额外需要的依赖
 └── README.md
 ```
 
@@ -165,10 +167,13 @@ A：属能力限制。Word 为尽力还原；PPT 为整页截图，适合放映�
 
 ## 打包成 Windows EXE
 
+打包入口在项目根目录，文件名是 `打包成EXE.bat`（和 `start.bat`、`双击打开.bat` 放在一起）。
+
 1. 在本机打开项目文件夹
 2. 双击 `打包成EXE.bat`（需已装 Python）
-3. 完成后打开 `dist\FileConverter\FileConverter.exe`
-4. 可将整个 `dist\FileConverter` 文件夹拷给别人用（无需再装 Python）
-5. Word/PPT→PDF 仍需本机安装 LibreOffice
+3. 脚本会准备环境，并按同目录的 `FileConverter.spec` 打包（打包依赖见 `requirements-build.txt`）
+4. 完成后打开 `dist\FileConverter\FileConverter.exe`
+5. 可将整个 `dist\FileConverter` 文件夹拷给别人用（无需再装 Python）
+6. Word/PPT→PDF 仍需本机安装 LibreOffice
 
 卸载：删除项目文件夹和 `dist` 即可。
