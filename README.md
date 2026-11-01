@@ -124,10 +124,13 @@ python convert.py file.pdf --to pptx --dpi 200
 
 ```
 file-converter/
-├── gui.py              # 向导式图形界面（推荐）
-├── convert.py          # 转换核心 + 命令行
+├── gui.py                 # 向导式图形界面（推荐）
+├── convert.py             # 转换核心 + 命令行
+├── start.bat / 双击打开.bat # Windows 启动（后者只是调用前者）
+├── start.sh               # macOS / Linux 启动
+├── 打包成EXE.bat           # 按 FileConverter.spec 打包
+├── scripts/ensure_venv.bat # Windows 共用：检查 Python 与依赖
 ├── requirements.txt
-├── start.bat / start.sh
 └── README.md
 ```
 
