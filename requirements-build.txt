@@ -1,0 +1,9 @@
+pdf2docx>=0.5.8
+pymupdf>=1.24.0,<2
+python-pptx>=1.0.0
+Pillow>=10.0.0
+natsort>=8.4.0
+pillow-heif>=0.16.0
+# 可选：SVG → 图片/PDF
+# cairosvg>=2.7.0
+pyinstaller>=6.0

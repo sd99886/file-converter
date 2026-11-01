@@ -1,0 +1,30 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+.eggs/
+
+# 构建产物（含本机路径，勿提交）
+build/
+dist/
+*.spec.bak
+
+# 本地环境与密钥
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+
+# 测试输出与用户文件
+samples/test_out/
+samples/out/
+*.pdf
+!samples/**/*.pdf
+
+# 系统文件
+Thumbs.db
+Desktop.ini
+.DS_Store
